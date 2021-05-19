@@ -1,9 +1,10 @@
 from nio import AsyncClient, MatrixRoom, RoomMessageText
 
-from my_project_name.chat_functions import react_to_event, send_text_to_room
-from my_project_name.config import Config
-from my_project_name.storage import Storage
+from nio_ioibot.chat_functions import react_to_event, send_text_to_room
+from nio_ioibot.config import Config
+from nio_ioibot.storage import Storage
 
+import pprint
 
 class Command:
     def __init__(
@@ -37,6 +38,13 @@ class Command:
         self.room = room
         self.event = event
         self.args = self.command.split()[1:]
+        pp = pprint.PrettyPrinter(indent=4)
+        pp.pprint(client)
+        print(store)
+        print(config)
+        print(command)
+        print(room)
+        pp.pprint(event)
 
     async def process(self):
         """Process the command"""

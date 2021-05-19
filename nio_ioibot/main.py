@@ -16,9 +16,9 @@ from nio import (
     UnknownEvent,
 )
 
-from my_project_name.callbacks import Callbacks
-from my_project_name.config import Config
-from my_project_name.storage import Storage
+from nio_ioibot.callbacks import Callbacks
+from nio_ioibot.config import Config
+from nio_ioibot.storage import Storage
 
 logger = logging.getLogger(__name__)
 
